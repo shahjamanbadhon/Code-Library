@@ -8,7 +8,9 @@ int main()
 
     for(int i=0;i<64;++i)
     {
-        if( (n&(1<<i))!=0 )
+        if((n&(1LL<<i))!=0)
+
+
         {
             cnt++;
         }
