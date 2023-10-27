@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    //number of elements
+    int n;
+    cin>>n;
+    vector<int>a;
+    //list of elements
+    for(int i=0; i<n; ++i)
+    {
+        int x;
+        cin>>x;
+        a.push_back(x);
+    }
+    //searching element
+    int y;
+    cin>>y;
+    /*
+    find index number of searching element
+    if element not found in list it return the
+    index number of first greater element or when
+    searching element is greater the biggest element of
+    the flist it return the index number of greatest element.
+    */
+    //generate distace index 0 to it
+    vector<int>:: iterator it;
+    it = lower_bound(a.begin(),a.end(),y);
+
+    cout<< distance(a.begin(),it)<<endl;
+
+    /*
+    if found searching element print the digit
+    or else closest greater number or when
+    searching element is greater the biggest element of
+    the flist it return greatest element.
+    */
+    cout<<*it<<endl;
+
+}
