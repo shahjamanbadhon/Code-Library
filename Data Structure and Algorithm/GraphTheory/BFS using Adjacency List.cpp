@@ -39,7 +39,7 @@ int main()
         vt[b].push_back(a);
     }
 
-    bfs(1);
+    bfs(x);
 
     for(int i=1;i<=n+1;i++)
     {
