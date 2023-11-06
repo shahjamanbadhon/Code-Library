@@ -1,14 +1,14 @@
-#include<bits/stdc++.h>
-#define stacks_MAX 100
+#include <bits/stdc++.h>
+#define STACK_MAX 100
 using namespace std;
 
-int stacks[stacks_MAX], top = -1;
+int stacks[STACK_MAX], top = -1;
 
 void push(int value)
 {
-    if(top == stacks_MAX-1)
+    if (top == STACK_MAX - 1)
     {
-        cout<<"Stack is full"<<endl;
+        cout << "Stack is full" << endl;
     }
     else
     {
@@ -19,22 +19,35 @@ void push(int value)
 
 void pop()
 {
-    //Task 01
+    if (top == -1)
+    {
+        cout << "Stack is empty" << endl;
+    }
+    else
+    {
+        cout << "Popped: " << stacks[top] << endl;
+        top--;
+    }
 }
 
 void print()
 {
-    for(int i=top; i>=0; i--)
-        cout<<stacks[i]<<" ";
+    for (int i = top; i >= 0; i--)
+        cout << stacks[i] << " ";
+    cout << endl;
 }
-
-
 
 int main()
 {
     push(1);
     push(5);
     push(9);
+    print();
+
+    pop(); // Pop the top element (9)
+    print();
+
+    push(11); // Push a new element (11)
     print();
 
     return 0;
