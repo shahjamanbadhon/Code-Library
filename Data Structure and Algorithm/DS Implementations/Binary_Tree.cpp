@@ -45,7 +45,43 @@ Node *create_tree(){
     return two;
 }
 
+
+//Travase
+void pre_order(Node *node){
+    cout << node->data <<' ';
+    if(node->left != NULL){
+        pre_order(node->left);
+    }
+    if(node->right != NULL){
+        pre_order(node->right);
+    }
+}
+void post_order(Node *node){
+
+    if(node->left != NULL){
+        post_order(node->left);
+    }
+    if(node->right != NULL){
+        post_order(node->right);
+    }
+    cout << node->data <<' ';
+}
+void in_order(Node *node){
+
+    if(node->left != NULL){
+        in_order(node->left);
+    }
+    cout << node->data <<' ';
+    if(node->right != NULL){
+        in_order(node->right);
+    }
+}
+
 int32_t main(){
     Node *root = create_tree();
-    cout << root->data;
+    pre_order(root);
+    cout << '\n';
+    post_order(root);
+    cout << '\n';
+    in_order(root);
 }
