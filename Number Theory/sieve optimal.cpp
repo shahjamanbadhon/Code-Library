@@ -27,13 +27,6 @@ void sieve(long long n){
     }
 }
 
-bool isPrime(long long n){
-    if(n < 2) return false;
-    if(n == 2 ) return true;
-    if(n % 2) return false;
-    return mark[n] == false;
-
-}
 
 int main(){
     int n = 100;
